@@ -1,0 +1,21 @@
+<hr>
+<h2>{{message}}</h2>
+<!-- Code for Data Binding -->
+ <p>{{title}}</p>
+ <p>{{description}}</p>
+
+ <img [src]="imageURL" [width]="w" [height]="h" [alt]="altText">
+
+ <p [style.color]="textColor">This text is color blue.</p>
+
+<p [class.highlighted]="isHighlighted">This text is highlighted.</p>
+
+<input [(ngModel)]="yourName" placeholder="Enter your name">
+<br>
+<p>Hello, {{yourName}}</p>
+
+<button (click)="inrement()">Inrement</button>
+<button (click)="decrement()">Decrement</button>
+<p>Count: {{ count }}</p>
+
+<hr>

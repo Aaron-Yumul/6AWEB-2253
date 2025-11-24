@@ -1,0 +1,36 @@
+<table>
+<tr>
+    <td>
+      @if(isStaticNoteVisible===true) {
+        <h2> This is a static note with true value!</h2>
+      } @else {
+        <h2> This static note has false value </h2>
+      }
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+      @if (isStaticNoteVisible===true) {
+      <p>This is a note!</p>
+      }
+    </td>
+  <td>
+  <button (click)="showNote()">Show Note</button>
+    </td>
+    <td>
+      <button (click)="hideNote()">Hide Note</button>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <button (click)="toggleNote()">{{isParagraphVisible ? 'Hide' : 'Show'}}</button>
+    @if (isParagraphVisible) {
+    <p>This is a toggleable paragraph!</p>
+    }
+  </tr>
+</table>

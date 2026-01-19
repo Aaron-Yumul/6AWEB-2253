@@ -1,0 +1,35 @@
+<h2>Employee List</h2>
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <th>ID</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+  </tr>
+
+  <tr *ngFor="let employee of employees">
+    <td class="text-center">{{ employee.id }}</td>
+    <td class="text-center">{{ employee.firstname }}</td>
+    <td class="text-center">{{ employee.lastname }}</td>
+    <td class="text-center">{{ employee.email }}</td>
+  </tr>
+</table>
+
+<h2>Product List</h2>
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <th>ID</th>
+    <th>Product</th>
+    <th>Description</th>
+    <th>Price</th>
+  </tr>
+
+  <tr *ngFor="let product of products">
+    <td class="text-center">{{ product.id }}</td>
+    <td class="text-center">{{ product.product }}</td>
+    <td class="text-center">{{ product.description }}</td>
+    <td class="text-center">{{ product.price}}</td>
+  </tr>
+</table>
+
+<router-outlet></router-outlet>

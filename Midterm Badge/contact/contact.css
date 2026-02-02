@@ -1,0 +1,81 @@
+/* Contact Page */
+.contact {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Title */
+.contact-title {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Labels */
+.contact-form label {
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* Inputs and Textarea */
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  resize: none;
+  color: #555;
+}
+
+/* Disabled input style */
+.contact-form input[readonly],
+.contact-form textarea[readonly] {
+  background-color: #eaeaea;
+  cursor: not-allowed;
+}
+
+/* Submit Button */
+.contact-form button {
+  padding: 12px;
+  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: not-allowed;
+  transition: all 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #333;
+}
+
+/* Form preview note */
+.form-preview {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.submitted {
+  font-style: italic;
+}

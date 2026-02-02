@@ -1,0 +1,59 @@
+<h1 class="page-title">Community Assistance Portal</h1>
+<p class="page-subtitle">
+  Explore available community services and view public feedback all in one place.
+</p>
+
+<h2 class="section-title">
+  <i class="bi bi-gear-fill"></i>
+  Available Services
+</h2>
+
+<hr>
+
+<input
+  type="text"
+  class="form-control search-box mb-3"
+  placeholder="Search services by title or description..."
+  (input)="search($event.target.value)"
+>
+
+<p class="record-count">
+  <strong>Displaying {{ filtered.length }} service entries</strong>
+</p>
+
+<ul class="list-group mb-4 service-list">
+  <li class="list-group-item service-item" *ngFor="let item of filtered">
+    <h6 class="service-title">{{ item.title | titlecase }}</h6>
+    <p class="service-description">{{ item.body }}</p>
+  </li>
+</ul>
+
+<h3 class="section-subtitle">User Comments & Feedback</h3>
+
+<table class="data-table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Submitted By</th>
+      <th>Email Address</th>
+      <th>Feedback</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    @for (comment of paginatedComments; track comment.id) {
+      <tr>
+        <td>{{ comment.id }}</td>
+        <td>{{ comment.name }}</td>
+        <td>{{ comment.email }}</td>
+        <td class="comment-body">{{ comment.body }}</td>
+      </tr>
+    }
+  </tbody>
+</table>
+
+<div class="d-flex justify-content-between align-items-center mt-3 pagination-bar">
+  <button class="btn btn-secondary" (click)="prevPage()">Previous Page</button>
+  <span class="page-indicator">Page {{ currentPage }}</span>
+  <button class="btn btn-secondary" (click)="nextPage()">Next Page</button>
+</div>

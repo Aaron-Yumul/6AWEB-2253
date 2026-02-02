@@ -1,0 +1,28 @@
+<h1 class="page-title">Community Support Portal</h1>
+<p class="page-subtitle">
+  A centralized space where community concerns, suggestions, and feedback are shared and addressed.
+</p>
+
+<h2 class="section-title">Latest Updates</h2>
+
+<table class="data-table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Sender</th>
+      <th>Contact Email</th>
+      <th>Message</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    @for (comment of httpcomments.slice(50,55); track comment.id) {
+      <tr>
+        <td>{{ comment.id }}</td>
+        <td>{{ comment.name }}</td>
+        <td>{{ comment.email }}</td>
+        <td class="comment-body">{{ comment.body }}</td>
+      </tr>
+    }
+  </tbody>
+</table>

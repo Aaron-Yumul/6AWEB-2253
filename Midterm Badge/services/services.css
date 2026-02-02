@@ -1,0 +1,118 @@
+/* Page Titles */
+.page-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.page-subtitle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #555;
+}
+
+/* Section Titles */
+.section-title,
+.section-subtitle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;  /* Center the titles */
+  margin-bottom: 20px;
+}
+
+/* Search Box */
+.search-box {
+  display: block;
+  margin: 0 auto 15px auto; /* centers the search box */
+  max-width: 400px;
+}
+
+/* Record count */
+.record-count {
+  text-align: center; /* center the record text */
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Services List */
+.service-list {
+  max-width: 1000px;
+  margin: 0 auto 30px auto; /* center the list container */
+}
+
+/* Table Styling */
+.data-table {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.data-table thead {
+  background-color: #000;
+  color: #fff;
+}
+
+.data-table th,
+.data-table td {
+  padding: 15px 18px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+/* Row hover effect */
+.data-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.comment-body {
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+/* Pagination Bar */
+.pagination-bar {
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.page-indicator {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* Responsive fix */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 34px;
+  }
+
+  .section-title,
+  .section-subtitle {
+    font-size: 40px;
+  }
+
+  .data-table {
+    font-size: 30px;
+  }
+
+  .search-box {
+    width: 90%;
+  }
+}

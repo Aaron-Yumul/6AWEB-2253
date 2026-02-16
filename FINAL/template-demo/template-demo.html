@@ -1,0 +1,112 @@
+<p>Angular Template Demo Form</p>
+
+<form (ngSubmit)="onSubmit()" #myForm="ngForm">
+
+  <input
+    class="input-box"
+    type="text"
+    name="username"
+    [(ngModel)]="username"
+    placeholder="Enter username"
+    required>
+
+  <input
+    class="input-box"
+    type="email"
+    name="email"
+    [(ngModel)]="email"
+    placeholder="Enter email"
+    required
+    email>
+
+  <input
+    class="input-box"
+    type="password"
+    name="password"
+    [(ngModel)]="password"
+    placeholder="Enter password"
+    required
+    minlength="6">
+
+  <select
+    class="input-box"
+    name="role"
+    [(ngModel)]="role"
+    required>
+
+    <option value="">Select role</option>
+    <option value="admin">Admin</option>
+    <option value="user">User</option>
+    <option value="guest">Guest</option>
+
+  </select>
+
+  <br><br>
+
+  <label>Gender:</label><br>
+
+  <label>
+    <input
+      type="radio"
+      name="gender"
+      value="Male"
+      [(ngModel)]="gender"
+      required>
+    Male
+  </label>
+
+  <label>
+    <input
+      type="radio"
+      name="gender"
+      value="Female"
+      [(ngModel)]="gender">
+    Female
+  </label>
+
+  <label>
+    <input
+      type="radio"
+      name="gender"
+      value="Other"
+      [(ngModel)]="gender">
+    Other
+  </label>
+
+  <br><br>
+
+  <label>Status:</label>
+
+  <select
+    class="input-box"
+    name="status"
+    [(ngModel)]="status"
+    required>
+
+    <option value="">Select status</option>
+    <option value="Permanent">Permanent</option>
+    <option value="Probationary">Probationary</option>
+
+  </select>
+
+  <br><br>
+
+  <label>Comments:</label>
+
+  <textarea
+    class="input-box"
+    name="comments"
+    [(ngModel)]="comments"
+    rows="4"
+    placeholder="Enter comments here">
+  </textarea>
+
+  <br><br>
+
+  <input
+    class="btn"
+    type="submit"
+    value="Submit"
+    [disabled]="!myForm.valid">
+
+</form>

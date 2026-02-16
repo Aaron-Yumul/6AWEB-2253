@@ -1,0 +1,102 @@
+<div class="card">
+  <h2>Angular Reactive Form</h2>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <input
+      class="input"
+      type="text"
+      placeholder="Username"
+      formControlName="username" />
+
+    @if (isInvalid('username')) {
+      <small class="error">
+        Username: 4–12 characters (letters/numbers only)
+      </small>
+    }
+
+    <input
+      class="input"
+      type="email"
+      placeholder="Email"
+      formControlName="email" />
+
+    @if (isInvalid('email')) {
+      <small class="error">
+        Enter a valid email
+      </small>
+    }
+
+    <input
+      class="input"
+      type="password"
+      placeholder="Password"
+      formControlName="password" />
+
+    @if (isInvalid('password')) {
+      <small class="error">
+        Password: min 8 chars, include upper, lower & number
+      </small>
+    }
+
+    <select class="input" formControlName="role">
+      @for (r of roles; track r) {
+        <option [value]="r">{{ r }}</option>
+      }
+    </select>
+
+    <div class="radio-group">
+      <label>Gender:</label>
+
+      <label>
+        <input type="radio" value="Male" formControlName="gender" />
+        Male
+      </label>
+
+      <label>
+        <input type="radio" value="Female" formControlName="gender" />
+        Female
+      </label>
+
+      <label>
+        <input type="radio" value="Other" formControlName="gender" />
+        Other
+      </label>
+    </div>
+
+    @if (isInvalid('gender')) {
+      <small class="error">Gender is required</small>
+    }
+
+    <select class="input" formControlName="status">
+      <option value="">Select Status</option>
+      <option value="Permanent">Permanent</option>
+      <option value="Probationary">Probationary</option>
+    </select>
+
+    @if (isInvalid('status')) {
+      <small class="error">Status is required</small>
+    }
+
+    <textarea
+      class="input"
+      rows="3"
+      placeholder="Comments (optional)"
+      formControlName="comments">
+    </textarea>
+
+    <button
+      class="btn"
+      type="submit"
+      [disabled]="form.invalid">
+      Submit
+    </button>
+
+  </form>
+
+  @if (submitted) {
+    <div class="success">
+    Form submitted successfully!
+    </div>
+  }
+</div>

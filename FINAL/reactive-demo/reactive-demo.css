@@ -1,0 +1,121 @@
+body {
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  width: 450px;
+  margin: 60px auto;
+  padding: 40px 35px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  border-top: 5px solid #667eea;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.card h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.input {
+  width: 94%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background-color: #f9fafb;
+}
+
+.input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 10px rgba(102, 126, 234, 0.2);
+  outline: none;
+  transform: scale(1.02);
+  background-color: #ffffff;
+}
+
+.radio-group {
+  margin: 15px 0;
+}
+
+.radio-group label {
+  margin-right: 15px;
+  font-weight: 500;
+  color: #374151;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+  accent-color: #667eea;
+}
+
+select.input {
+  cursor: pointer;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(118, 75, 162, 0.3);
+}
+
+.btn:disabled {
+  background-color: #c1c1c1;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.error {
+  display: block;
+  font-size: 12px;
+  color: #dc2626;
+  margin-top: -5px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.success {
+  margin-top: 25px;
+  padding: 12px;
+  text-align: center;
+  background-color: #d1fae5;
+  border: 1px solid #6ee7b7;
+  color: #065f46;
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
